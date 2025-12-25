@@ -1,0 +1,5 @@
+user,geo,device_score,action
+alice,IN,0.9,login
+bob,US,0.6,ssh
+root,CN,0.3,sudo
+dan,AE,0.7,download

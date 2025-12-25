@@ -1,0 +1,123 @@
+:root {
+  --bg: #0b1220; /* page background */
+  --panel: linear-gradient(180deg,#071021 0%, #0b1220 100%);
+  --card: linear-gradient(180deg,#081426 0%, #0b1626 100%);
+  --glass: rgba(255,255,255,0.03);
+  --muted: #9fb3c8;
+  --accent: #4ba6ff;
+  --accent-2: #7ce3ff;
+  --success: #10b981;
+  --danger: #ef4444;
+  --text: #e6f1f8;
+  --subtle: rgba(255,255,255,0.04);
+}
+html, body, .stApp, .main {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  overflow-x: hidden !important;
+}
+.card {
+  background: var(--card);
+  border-radius: 14px;
+  padding: 14px;
+  border: 1px solid var(--subtle);
+  box-shadow: 0 8px 30px rgba(3,8,18,0.6);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(3,8,18,0.7);
+}
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+}
+.small {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+[data-testid="stSidebar"] {
+  background: linear-gradient(180deg,#06111b,#081728) !important;
+  border-right: 1px solid rgba(255,255,255,0.03);
+  padding: 18px 14px;
+}
+[data-testid="stSidebar"] .stMarkdown h1, [data-testid="stSidebar"] h2 {
+  color: var(--text);
+}
+.stButton>button {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2)) !important;
+  color: #021220 !important;
+  border: none !important;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 6px 18px rgba(75,166,255,0.14);
+  transition: 0.2s;
+}
+.stButton>button:hover {
+  transform: translateY(-2px);
+}
+.badge-allow {
+  background: rgba(16,185,129,0.12);
+  color: var(--success);
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:700;
+}
+.badge-deny {
+  background: rgba(239,68,68,0.10);
+  color: var(--danger);
+  padding:6px 10px;
+  border-radius:8px;
+  font-weight:700;
+}
+.stTextInput, .stNumberInput, .stSelectbox, .stSlider {
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.02);
+  color: var(--text) !important;
+}
+.stDataFrame table {
+  border-collapse: separate !important;
+  border-spacing: 0 6px !important;
+  background: transparent !important;
+}
+.stDataFrame tbody tr {
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+.stDataFrame tbody tr:hover { 
+  background: rgba(75,166,255,0.04) !important;
+}
+.fancy-underline {
+  display:inline-block;
+  position:relative;
+  padding-bottom:6px;
+}
+.fancy-underline:after {
+  content:"";
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:3px;
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  border-radius:3px;
+  transform-origin:left;
+  transform:scaleX(0);
+  transition:transform .35s ease;
+}
+.fancy-underline:hover:after {
+  transform:scaleX(1);
+}
+[title="Download"] {
+  background: linear-gradient(90deg, #06b6d4, #3b82f6) !important;
+  color: white !important;
+  border-radius: 10px !important;
+}
+@media (max-width: 900px) {
+  .metric-value { font-size: 1.15rem; }
+  .card { padding: 10px; }
+}

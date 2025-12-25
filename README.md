@@ -54,14 +54,20 @@ This project addresses these issues by integrating **Explainable AI techniques**
 - Pandas
 - NumPy
 
+---
+
 ## Dataset
 The project uses a synthetic Zero Trust–style dataset simulating user trust levels,
 device posture, and access risk attributes to ensure privacy and reproducibility.
+
+---
 
 ## Explainability Output
 - Feature importance scores for each access decision
 - SHAP-based explanations for allow/deny outcomes
 - Transparent justification aligned with Zero Trust principles
+
+---
 
 ## Future Scope
 - Integration with real IAM or SIEM systems
